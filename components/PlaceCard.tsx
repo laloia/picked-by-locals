@@ -58,7 +58,7 @@ export default function PlaceCard({ place }: { place: Place }) {
         {/* Category Badge */}
         <div style={{
           background: categoryColor,
-          color: 666,
+          color: "#666",
           padding: "8px 12px",
           fontSize: 12,
           fontWeight: 600,

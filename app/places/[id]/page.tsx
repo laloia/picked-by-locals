@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import PlaceMap from "@/components/PlaceMap";
 
 export async function generateMetadata({ params }: any) {
-  const place = await getPlace(params.id);
+  const { id } = await params; 
+  const place = await getPlace(id);
   if (!place) return { title: "Place not found" };
 
   return {
@@ -45,10 +46,11 @@ export default async function PlaceDetailPage({
 }: {
   params: { id: string };
 }) {
-  const place = await getPlace(params.id);
+  const { id } = await params; 
+  const place = await getPlace(id);
   if (!place) return notFound();
 
-  const photos = await getPlacePhotos(params.id);
+  const photos = await getPlacePhotos(id);
 
   return (
     <article style={{ maxWidth: 900, margin: "0 auto", padding: "0 24px" }}>
