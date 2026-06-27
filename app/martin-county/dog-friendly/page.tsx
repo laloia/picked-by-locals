@@ -25,20 +25,22 @@ export default async function HomePage() {
 
   return (
     <div>
-        <section style={{ 
-          textAlign: "center", 
-          padding: "60px 16px",
-          backgroundImage: "url('https://vylcfzvavvbppfdvuebh.supabase.co/storage/v1/object/public/place-photos/Mollybeach.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center 65%",
-          backgroundAttachment: "fixed",
-          position: "relative",
-          width: "100vw",
-          marginLeft: "calc(-50vw + 50%)",
-          minHeight: "450px",
-          overflow: "hidden",
-          boxSizing: "border-box",
-        }}>
+       <section style={{ 
+  textAlign: "center", 
+  padding: "60px 0",
+  backgroundImage: "url('https://vylcfzvavvbppfdvuebh.supabase.co/storage/v1/object/public/place-photos/Mollybeach.jpg')",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundAttachment: "fixed",
+  position: "relative",
+  width: "100vw",
+  marginLeft: "calc(-50vw + 50%)",
+  minHeight: "400px",
+  overflow: "hidden",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+}}>
         {/* Dark overlay for text readability */}
         <div style={{
           position: "absolute",
@@ -53,34 +55,26 @@ export default async function HomePage() {
     position: "relative", 
     zIndex: 1, 
     width: "100%",
-    maxWidth: "100%",
-    padding: "0 16px",
+    maxWidth: "1200px",
+    padding: "0 24px",
     boxSizing: "border-box",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  }}>            <h1 style={{ 
-    fontSize: "clamp(24px, 8vw, 42px)", 
-    marginBottom: 16, 
-    color: "white",
-    maxWidth: "90vw",
-    wordWrap: "break-word",
   }}>
-            Find dog-friendly spots in Martin County
-          </h1>
-          <p style={{ 
+    <h1 style={{ 
+      fontSize: "clamp(24px, 8vw, 42px)", 
+      marginBottom: 16, 
+      color: "white",
+    }}>
+      Find dog-friendly spots in Martin County
+    </h1>
+    <p style={{ 
       opacity: 0.9, 
       marginBottom: 24, 
       color: "white",
-      maxWidth: "90vw",
       fontSize: "clamp(14px, 4vw, 16px)",
-      wordWrap: "break-word",
     }}>
-          Discover the best beaches, waterfront restaurants, breweries, coffee shops, parks, and hidden gems—all personally verified by local dog owners.
-          </p>
-        
-          
-          <a href="/martin-county/dog-friendly"
+      Discover the best beaches, waterfront restaurants, breweries, coffee shops, parks, and hidden gems—all personally verified by local dog owners.
+    </p>
+    <a href="/martin-county/dog-friendly"
       style={{
         display: "inline-block",
         padding: "12px 24px",
@@ -92,8 +86,9 @@ export default async function HomePage() {
         whiteSpace: "nowrap",
       }}
     >
-            Browse the map
-          </a>
+      Browse the map
+    </a>
+
             {/* Category Shortcuts */}
     <div style={{ 
       display: "flex", 
