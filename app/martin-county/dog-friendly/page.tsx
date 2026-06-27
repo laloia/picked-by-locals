@@ -27,18 +27,17 @@ export default async function HomePage() {
     <div>
         <section style={{ 
           textAlign: "center", 
-          padding: "96px 24px",
+          padding: "60px 16px",
           backgroundImage: "url('https://vylcfzvavvbppfdvuebh.supabase.co/storage/v1/object/public/place-photos/Mollybeach.jpg')",
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center 65%",
           backgroundAttachment: "fixed",
           position: "relative",
           width: "100vw",
-          maxWidth: "100vw",
-          minHeight: "400px",
           marginLeft: "calc(-50vw + 50%)",
-          marginRight: "calc(-50vw + 50%)",
+          minHeight: "450px",
           overflow: "hidden",
+          boxSizing: "border-box",
         }}>
         {/* Dark overlay for text readability */}
         <div style={{
@@ -50,27 +49,65 @@ export default async function HomePage() {
           background: "rgba(0, 0, 0, 0.3)",
         }} />
         
-        <div style={{ position: "relative", zIndex: 1, maxWidth: "800px", margin: "0 auto", padding: "0 24px"  }}>
-          <h1 style={{ fontSize: 42, marginBottom: 8, color: "white" }}>
+        <div style={{ 
+    position: "relative", 
+    zIndex: 1, 
+    width: "100%",
+    maxWidth: "100%",
+    padding: "0 16px",
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  }}>            <h1 style={{ 
+    fontSize: "clamp(24px, 8vw, 42px)", 
+    marginBottom: 16, 
+    color: "white",
+    maxWidth: "90vw",
+    wordWrap: "break-word",
+  }}>
             Find dog-friendly spots in Martin County
           </h1>
-          <p style={{ fontSize: 18, opacity: 0.9, marginBottom: 24, color: "white" }}>
+          <p style={{ 
+      opacity: 0.9, 
+      marginBottom: 24, 
+      color: "white",
+      maxWidth: "90vw",
+      fontSize: "clamp(14px, 4vw, 16px)",
+      wordWrap: "break-word",
+    }}>
           Discover the best beaches, waterfront restaurants, breweries, coffee shops, parks, and hidden gems—all personally verified by local dog owners.
           </p>
         
           
-            <a href="/map"
-            style={{
-              display: "inline-block",
-              padding: "12px 24px",
-              background: "#1d9e75",
-              color: "white",
-              borderRadius: 8,
-              textDecoration: "none",
-            }}
-          >
+          <a href="/martin-county/dog-friendly"
+      style={{
+        display: "inline-block",
+        padding: "12px 24px",
+        background: "#1d9e75",
+        color: "white",
+        borderRadius: 8,
+        textDecoration: "none",
+        marginBottom: 32,
+        whiteSpace: "nowrap",
+      }}
+    >
             Browse the map
           </a>
+            {/* Category Shortcuts */}
+    <div style={{ 
+      display: "flex", 
+      flexWrap: "wrap", 
+      gap: 8, 
+      justifyContent: "center",
+      width: "100%",
+    }}>
+  <a href="/martin-county/dog-friendly?category=beach" style={{ padding: "10px 16px", background: "rgba(255,255,255,0.2)", color: "white", borderRadius: 8, textDecoration: "none", fontSize: 14, fontWeight: 600, backdropFilter: "blur(10px)" }}>🏖️ Beaches</a>
+  <a href="/martin-county/dog-friendly?category=coffee_shop" style={{ padding: "10px 16px", background: "rgba(255,255,255,0.2)", color: "white", borderRadius: 8, textDecoration: "none", fontSize: 14, fontWeight: 600, backdropFilter: "blur(10px)" }}>☕ Coffee</a>
+  <a href="/martin-county/dog-friendly?category=brewery" style={{ padding: "10px 16px", background: "rgba(255,255,255,0.2)", color: "white", borderRadius: 8, textDecoration: "none", fontSize: 14, fontWeight: 600, backdropFilter: "blur(10px)" }}>🍺 Breweries</a>
+  <a href="/martin-county/dog-friendly?category=restaurant" style={{ padding: "10px 16px", background: "rgba(255,255,255,0.2)", color: "white", borderRadius: 8, textDecoration: "none", fontSize: 14, fontWeight: 600, backdropFilter: "blur(10px)" }}>🥘  Restaurants</a>
+  <a href="/martin-county/dog-friendly?category=park" style={{ padding: "10px 16px", background: "rgba(255,255,255,0.2)", color: "white", borderRadius: 8, textDecoration: "none", fontSize: 14, fontWeight: 600, backdropFilter: "blur(10px)" }}>🌳 Parks</a>
+</div>
         </div>
       </section>
       <section style={{ 
@@ -135,7 +172,7 @@ export default async function HomePage() {
         We don't list every place with a dog bowl and outdoor seating. Picked by Locals features only spots where dogs are genuinely welcome—places where the staff loves dogs, the environment is designed for them, and your pup will have as good a time as you do.        </p>
       </section>
 
-      <section>
+      <section id="all-places">
         <h2 style={{ fontSize: 20, marginBottom: 16 }}>All places</h2>
         <PlacesDirectory />
       </section>
