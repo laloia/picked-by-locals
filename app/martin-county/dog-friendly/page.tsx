@@ -25,17 +25,21 @@ export default async function HomePage() {
 
   return (
     <div>
-      <section style={{ 
-        textAlign: "center", 
-        padding: "96px 24px",
-        backgroundImage: "url('https://vylcfzvavvbppfdvuebh.supabase.co/storage/v1/object/public/place-photos/beach.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center 55%",
-        backgroundAttachment: "fixed",
-        position: "relative",
-        width: "100vw",
-        marginLeft: "calc(-50vw + 50%)",
-      }}>
+        <section style={{ 
+          textAlign: "center", 
+          padding: "96px 24px",
+          backgroundImage: "url('https://vylcfzvavvbppfdvuebh.supabase.co/storage/v1/object/public/place-photos/Mollybeach.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          position: "relative",
+          width: "100vw",
+          maxWidth: "100vw",
+          minHeight: "400px",
+          marginLeft: "calc(-50vw + 50%)",
+          marginRight: "calc(-50vw + 50%)",
+          overflow: "hidden",
+        }}>
         {/* Dark overlay for text readability */}
         <div style={{
           position: "absolute",
@@ -43,19 +47,17 @@ export default async function HomePage() {
           left: 0,
           right: 0,
           bottom: 0,
-          background: "rgba(0, 0, 0, 0.4)",
+          background: "rgba(0, 0, 0, 0.3)",
         }} />
         
-        <div style={{ position: "relative", zIndex: 1 }}>
-          <h1 style={{ fontSize: 32, marginBottom: 8, color: "white" }}>
+        <div style={{ position: "relative", zIndex: 1, maxWidth: "800px", margin: "0 auto", padding: "0 24px"  }}>
+          <h1 style={{ fontSize: 42, marginBottom: 8, color: "white" }}>
             Find dog-friendly spots in Martin County
           </h1>
-          <p style={{ opacity: 0.9, marginBottom: 24, color: "white" }}>
-            Curated by locals. Verified by pups.
+          <p style={{ fontSize: 18, opacity: 0.9, marginBottom: 24, color: "white" }}>
+          Discover the best beaches, waterfront restaurants, breweries, coffee shops, parks, and hidden gems—all personally verified by local dog owners.
           </p>
-          <p style={{ opacity: 0.7, marginBottom: 24, color:"white" }}>
-          The best beaches, restaurants, parks, and more that cater to your fur baby.
-        </p>
+        
           
             <a href="/map"
             style={{

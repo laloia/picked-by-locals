@@ -50,7 +50,7 @@ export default function RootLayout({
     }}
   />
 </head>
-      <body style={{ margin: 0, fontFamily: "system-ui, sans-serif" }}>
+      <body style={{ margin: 0, fontFamily: "system-ui, sans-serif", overflowX: "hidden" }}>
         <Header />
         <main style={{ padding: 24, maxWidth: 960, margin: "0 auto" }}>
           {children}
