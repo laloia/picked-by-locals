@@ -2,6 +2,7 @@ import { supabase } from "@/lib/supabase";
 import { Place } from "@/lib/types";
 import PlaceCard from "@/components/PlaceCard";
 import PlacesDirectory from "@/components/PlacesDirectory";
+import { Suspense } from "react";
 
 export const revalidate = 60;
 
@@ -168,9 +169,11 @@ export default async function HomePage() {
       </section>
 
       <section id="all-places">
-        <h2 style={{ fontSize: 20, marginBottom: 16 }}>All places</h2>
-        <PlacesDirectory />
-      </section>
+  <h2 style={{ fontSize: 20, marginBottom: 16 }}>All places</h2>
+  <Suspense fallback={<div>Loading places...</div>}>
+    <PlacesDirectory />
+  </Suspense>
+</section>
     </div>
   );
 }
