@@ -5,6 +5,8 @@ import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { supabase } from "@/lib/supabase";
 import { Place, PlaceCategory } from "@/lib/types";
+import MollySection from "@/components/MollySection";
+
 
 const CATEGORIES: PlaceCategory[] = [
   "beach",
@@ -136,6 +138,21 @@ export default function MapPage() {
         ref={mapContainer}
         style={{ width: "100%", height: 500, borderRadius: 12 }}
       />
+            <div style={{
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  margin: "48px 0",
+  gap: 12,
+}}>
+  <div style={{ flex: 1, height: 1, background: "#e5e7eb" }}/>
+  <span style={{ fontSize: 20, opacity: 0.6 }}>🐾</span>
+  <div style={{ flex: 1, height: 1, background: "#e5e7eb" }}/>
+</div>
+        <MollySection />
     </div>
+    
   );
+
+
 }
