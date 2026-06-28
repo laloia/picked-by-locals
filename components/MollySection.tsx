@@ -4,7 +4,7 @@ export default function MollySection() {
   return (
     <section style={{
       marginBottom: 48,
-      padding: "48px 24px",
+      padding: "48px 0",
       background: "linear-gradient(135deg, #f0fdf4 0%, #f0f9ff 100%)",
       width: "100vw",
       marginLeft: "calc(-50vw + 50%)",
@@ -40,6 +40,7 @@ export default function MollySection() {
         alignItems: "center",
         gap: 48,
         padding: "0 24px",
+        boxSizing: "border-box",
       }} className="molly-container">
         {/* Molly's photo - Left side */}
         <div style={{
