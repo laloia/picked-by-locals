@@ -107,13 +107,13 @@ export default async function HomePage() {
         </div>
       </section>
       <section style={{ 
-        marginBottom: 48,
+        marginBottom: 0,
         background: "linear-gradient(135deg, #f0fdf4 0%, #f0f9ff 100%)",
         borderRadius: 16,
         //borderLeft: "4px solid #1d9e75",
         width: "100vw",
         marginLeft: "calc(-50vw + 50%)",
-        padding: "32px 0",
+        padding: "42px 0",
       }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px" }}>
           <div style={{ marginBottom: 24 }}>
@@ -162,11 +162,96 @@ export default async function HomePage() {
         </div>
         
       </section>
-      <section style={{ marginBottom: 32, padding: 24, background: "#f6f6f4", borderRadius: 12 }}>
-        <h2 style={{ fontSize: 18, marginBottom: 12 }}>About this guide</h2>
-        <p style={{ lineHeight: 1.6, opacity: 0.85 }}>
-        We don't list every place with a dog bowl and outdoor seating. Picked by Locals features only spots where dogs are genuinely welcome—places where the staff loves dogs, the environment is designed for them, and your pup will have as good a time as you do.        </p>
-      </section>
+
+      <div style={{
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  margin: "48px 0",
+  gap: 12,
+}}>
+  <div style={{ flex: 1, height: 1, background: "#e5e7eb" }}/>
+  <span style={{ fontSize: 20, opacity: 0.6 }}>🐾</span>
+  <div style={{ flex: 1, height: 1, background: "#e5e7eb" }}/>
+</div>
+     
+
+      <section style={{
+  marginBottom: 48,
+  marginTop: 0,
+  padding: "48px 24px",
+  background: "linear-gradient(135deg, #f0fdf4 0%, #f0f9ff 100%)",
+  width: "100vw",
+  marginLeft: "calc(-50vw + 50%)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+}}>
+   
+  <div style={{
+    maxWidth: 1200,
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    gap: 48,
+    padding: "0 24px",
+  }}>
+    {/* Molly's photo - Left side */}
+    <div style={{
+      flex: "0 0 300px",
+      display: "flex",
+      justifyContent: "center",
+    }}>
+      <img
+        src="https://vylcfzvavvbppfdvuebh.supabase.co/storage/v1/object/public/place-photos/molly.jpg"
+        alt="Molly - Local Tour Guide"
+        style={{
+          width: 280,
+          height: 280,
+          borderRadius: "50%",
+          objectFit: "cover",
+          border: "4px solid #1d9e75",
+          boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+        }}
+      />
+    </div>
+
+    {/* Copy - Right side */}
+    <div style={{
+      flex: 1,
+      textAlign: "left",
+    }}>
+      <h2 style={{ fontSize: 28, marginBottom: 24, fontWeight: 700, color: "#1d9e75", marginTop: 0 }}>
+        Meet Your Local Tour Guide
+      </h2>
+      
+      <h3 style={{ fontSize: 24, marginBottom: 16, color: "#1f2937", marginTop: 0 }}>
+        Molly 🐾
+      </h3>
+      <p style={{ 
+        fontSize: 16, 
+        lineHeight: 1.8, 
+        color: "#4b5563",
+        marginBottom: 16,
+      }}>
+        Meet Molly, a local Martin County pup with impeccable taste in dog-friendly spots. After years of exploring beaches, breweries, restaurants, and parks across the Treasure Coast, Molly knows exactly where dogs are truly welcome—and where the best treats are hidden.
+      </p>
+      <p style={{ 
+        fontSize: 16, 
+        lineHeight: 1.8, 
+        color: "#4b5563",
+        marginBottom: 0,
+      }}>
+        Every place on Picked by Locals has been personally tested by Molly and verified by local dog owners who share her passion for finding spots where pups are genuinely loved. We don't list every place with a dog bowl—we only feature locations where your dog will have as good a time as you do.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
 
       <section id="all-places">
   <h2 style={{ fontSize: 20, marginBottom: 16 }}>All places</h2>
