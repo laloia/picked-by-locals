@@ -81,7 +81,7 @@ export default function MollySection() {
             color: "#4b5563",
             marginBottom: 16,
           }}>
-            Meet Molly, a local Martin County pup with impeccable taste in dog-friendly spots. After years of exploring beaches, breweries, restaurants, and parks across the Treasure Coast, Molly knows exactly where dogs are truly welcome—and where the best treats are hidden.
+            Meet Molly, a local Martin County pup with impeccable taste in dog-friendly spots. After years of exploring beaches, breweries, restaurants, and parks across Martin County, Molly knows exactly where dogs are truly welcome—and where the best treats are hidden.
           </p>
           <p style={{ 
             fontSize: 16, 
