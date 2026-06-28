@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Head from "next/head";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
@@ -52,11 +52,11 @@ export default function RootLayout({
         />
       </head>
       <body style={{ margin: 0, fontFamily: "system-ui, sans-serif", overflowX: "hidden" }}>
+      <GoogleAnalytics />
         <Header />
         <main style={{ padding: 24, maxWidth: 960, margin: "0 auto" }}>
           {children}
         </main>
-        <GoogleAnalytics gaId="G-50ZJ1GJBXW" />
       </body>
     </html>
   );
