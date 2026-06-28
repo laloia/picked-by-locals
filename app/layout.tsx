@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Head from "next/head";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
@@ -21,7 +23,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: {
@@ -30,31 +31,32 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        name: "Picked by Locals",
-        description: "Curated dog-friendly places directory for Martin County, Florida",
-        url: "https://pickedbylocals.com",
-        logo: "https://pickedbylocals.com/logo.png",
-        areaServed: {
-          "@type": "City",
-          name: "Stuart",
-          addressCountry: "US",
-          addressRegion: "FL",
-        },
-      }),
-    }}
-  />
-</head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Picked by Locals",
+              description: "Curated dog-friendly places directory for Martin County, Florida",
+              url: "https://pickedbylocals.com",
+              logo: "https://pickedbylocals.com/logo.png",
+              areaServed: {
+                "@type": "City",
+                name: "Stuart",
+                addressCountry: "US",
+                addressRegion: "FL",
+              },
+            }),
+          }}
+        />
+      </head>
       <body style={{ margin: 0, fontFamily: "system-ui, sans-serif", overflowX: "hidden" }}>
         <Header />
         <main style={{ padding: 24, maxWidth: 960, margin: "0 auto" }}>
           {children}
         </main>
+        <GoogleAnalytics gaId="G-50ZJ1GJBXW" />
       </body>
     </html>
   );
